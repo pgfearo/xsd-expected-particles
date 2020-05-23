@@ -1,0 +1,34 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "xslt",
+			"label": "generate-typescript",
+			"saxonJar": "${config:XSLT.tasks.saxonJar}",
+			"xsltFile": "${workspaceFolder}/src/generate-typescript.xsl",
+			"xmlSource": "${workspaceFolder}/../xslt30schema/schema-for-xslt30.xsd",
+			"resultPath": "${workspaceFolder}/xslt-out/generate-typescript-out.xml",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [
+				"$saxon-xslt"
+			]
+		},
+		{
+			"type": "xslt",
+			"label": "xslt: generate-typescript",
+			"saxonJar": "${config:XSLT.tasks.saxonJar}",
+			"xsltFile": "${workspaceFolder}/src/generate-typescript.xsl",
+			"xmlSource": "${workspaceFolder}/../xslt30schema/schema-for-xslt30.xsd",
+			"resultPath": "${workspaceFolder}/xslt-out/generate-typescript-out.xml",
+			"group": {
+				"kind": "build"
+			},
+			"problemMatcher": [
+				"$saxon-xslt"
+			]
+		}
+	]
+}
